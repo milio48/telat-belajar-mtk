@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telat Belajar Matematika — Kurikulum Lengkap SD, SMP, SMA</title>
+  <meta name="description" content="Platform belajar matematika gratis dari SD hingga SMA dengan metode Grounded Math. Memahami akar konsep, contoh dunia nyata, logika komputasi, dan soal latihan interaktif.">
+
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .landing-hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4338ca 60%, #6366f1 100%);
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .landing-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 20%, rgba(99,102,241,.3) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(139,92,246,.2) 0%, transparent 60%);
+    }
+    .landing-hero > * { position: relative; z-index: 1; }
+    .landing-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: .5rem; }
+    .landing-hero .tagline { font-size: 1.1rem; opacity: .8; max-width: 640px; margin: 0 auto 2rem; line-height: 1.6; }
+    .landing-hero .emoji-title { font-size: 3rem; margin-bottom: 1rem; display: block; }
+
+    .method-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+    .method-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .4rem .9rem;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 500;
+      backdrop-filter: blur(6px);
+    }
+
+    .grade-sections { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .grade-block { margin-bottom: 2.5rem; }
+    .grade-block-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: .3rem .8rem;
+      border-radius: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .grade-badge.sd { background: #eef2ff; color: #4338ca; }
+    .grade-badge.smp { background: #ecfdf5; color: #047857; }
+    .grade-badge.sma { background: #f5f3ff; color: #6d28d9; }
+    .grade-title { font-size: 1.3rem; font-weight: 700; color: var(--gray-900); }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1rem;
+    }
+    .class-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: all .25s;
+      text-decoration: none;
+      color: var(--gray-800);
+    }
+    .class-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .class-card .card-id {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--gray-400);
+      margin-bottom: .25rem;
+    }
+    .class-card .card-title {
+      font-size: .95rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .class-card .card-class {
+      font-size: .72rem;
+      color: var(--gray-500);
+      margin-top: .35rem;
+    }
+
+    .class-section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin: 1.5rem 0 .75rem;
+      padding-left: .25rem;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .class-section-title::before {
+      content: '';
+      width: 4px;
+      height: 1em;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .stat-block { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; }
+    .stat-label { font-size: .78rem; opacity: .7; }
+
+    @media (max-width: 640px) {
+      .landing-hero h1 { font-size: 1.6rem; }
+      .class-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="grade-sd">
+  <div style="min-height:100vh;">
+
+    <!-- Hero -->
+    <header class="landing-hero">
+      <span class="emoji-title">🧮</span>
+      <h1>Telat Belajar Matematika</h1>
+      <p class="tagline">Berusaha mengejar ketertinggalan belajar matematika secara praktis, membumi, dan relevan dengan dunia nyata — dari SD hingga SMA.</p>
+
+      <div class="method-pills">
+        <span class="method-pill"><i data-lucide="tree-pine" style="width:14px;height:14px"></i> Akar Konsep</span>
+        <span class="method-pill"><i data-lucide="globe-2" style="width:14px;height:14px"></i> Pijakan Bumi</span>
+        <span class="method-pill"><i data-lucide="calculator" style="width:14px;height:14px"></i> Mekanika Dasar</span>
+        <span class="method-pill"><i data-lucide="code-2" style="width:14px;height:14px"></i> Logika Komputasi</span>
+        <span class="method-pill"><i data-lucide="languages" style="width:14px;height:14px"></i> Navigasi Global</span>
+        <span class="method-pill"><i data-lucide="swords" style="width:14px;height:14px"></i> Uji Ketangkasan</span>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-block"><div class="stat-num">67</div><div class="stat-label">Bab Materi</div></div>
+        <div class="stat-block"><div class="stat-num">12</div><div class="stat-label">Kelas</div></div>
+        <div class="stat-block"><div class="stat-num">6</div><div class="stat-label">Pilar Metode</div></div>
+      </div>
+    </header>
+
+    <!-- Curriculum Grid -->
+    <div class="grade-sections">
+
+      <!-- SD -->
+      <div class="grade-block" style="--accent:#6366f1;--accent-light:#eef2ff;">
+        <div class="grade-block-header">
+          <span class="grade-badge sd">SD</span>
+          <span class="grade-title">Sekolah Dasar (Kelas 1 – 6)</span>
+        </div>
+
+        <div class="class-section-title">Kelas 1</div>
+        <div class="class-grid">
+          <a href="1-1.html" class="class-card"><div class="card-id">1-1</div><div class="card-title">Pengenalan & Operasi Bilangan</div><div class="card-class">Kelas 1</div></a>
+          <a href="1-2.html" class="class-card"><div class="card-id">1-2</div><div class="card-title">Pengukuran Waktu, Panjang, Berat</div><div class="card-class">Kelas 1</div></a>
+          <a href="1-3.html" class="class-card"><div class="card-id">1-3</div><div class="card-title">Bangun Datar & Bangun Ruang</div><div class="card-class">Kelas 1</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 2</div>
+        <div class="class-grid">
+          <a href="2-1.html" class="class-card"><div class="card-id">2-1</div><div class="card-title">Bilangan Cacah & Operasi Hitung</div><div class="card-class">Kelas 2</div></a>
+          <a href="2-2.html" class="class-card"><div class="card-id">2-2</div><div class="card-title">Perkalian dan Pembagian</div><div class="card-class">Kelas 2</div></a>
+          <a href="2-3.html" class="class-card"><div class="card-id">2-3</div><div class="card-title">Pengukuran (Panjang, Berat, Waktu)</div><div class="card-class">Kelas 2</div></a>
+          <a href="2-4.html" class="class-card"><div class="card-id">2-4</div><div class="card-title">Bangun Datar</div><div class="card-class">Kelas 2</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 3</div>
+        <div class="class-grid">
+          <a href="3-1.html" class="class-card"><div class="card-id">3-1</div><div class="card-title">Bilangan, Uang, & Operasi Hitung</div><div class="card-class">Kelas 3</div></a>
+          <a href="3-2.html" class="class-card"><div class="card-id">3-2</div><div class="card-title">Pecahan Sederhana</div><div class="card-class">Kelas 3</div></a>
+          <a href="3-3.html" class="class-card"><div class="card-id">3-3</div><div class="card-title">Pengukuran Baku</div><div class="card-class">Kelas 3</div></a>
+          <a href="3-4.html" class="class-card"><div class="card-id">3-4</div><div class="card-title">Bangun Datar, Keliling, & Luas</div><div class="card-class">Kelas 3</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 4</div>
+        <div class="class-grid">
+          <a href="4-1.html" class="class-card"><div class="card-id">4-1</div><div class="card-title">Operasi Hitung & Bilangan Bulat</div><div class="card-class">Kelas 4</div></a>
+          <a href="4-2.html" class="class-card"><div class="card-id">4-2</div><div class="card-title">Kelipatan, Faktor, Bil. Romawi</div><div class="card-class">Kelas 4</div></a>
+          <a href="4-3.html" class="class-card"><div class="card-id">4-3</div><div class="card-title">Pecahan Lanjutan</div><div class="card-class">Kelas 4</div></a>
+          <a href="4-4.html" class="class-card"><div class="card-id">4-4</div><div class="card-title">Pengukuran (Sudut, Waktu, dll)</div><div class="card-class">Kelas 4</div></a>
+          <a href="4-5.html" class="class-card"><div class="card-id">4-5</div><div class="card-title">Bangun Datar & Bangun Ruang</div><div class="card-class">Kelas 4</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 5</div>
+        <div class="class-grid">
+          <a href="5-1.html" class="class-card"><div class="card-id">5-1</div><div class="card-title">Operasi Bilangan, Pangkat, Akar</div><div class="card-class">Kelas 5</div></a>
+          <a href="5-2.html" class="class-card"><div class="card-id">5-2</div><div class="card-title">Pengukuran Lanjutan</div><div class="card-class">Kelas 5</div></a>
+          <a href="5-3.html" class="class-card"><div class="card-id">5-3</div><div class="card-title">Pecahan, Persen, & Skala</div><div class="card-class">Kelas 5</div></a>
+          <a href="5-4.html" class="class-card"><div class="card-id">5-4</div><div class="card-title">Bangun Datar & Bangun Ruang</div><div class="card-class">Kelas 5</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 6</div>
+        <div class="class-grid">
+          <a href="6-1.html" class="class-card"><div class="card-id">6-1</div><div class="card-title">Operasi Bilangan Bulat & Pecahan</div><div class="card-class">Kelas 6</div></a>
+          <a href="6-2.html" class="class-card"><div class="card-id">6-2</div><div class="card-title">Pengukuran (Volume, Waktu, Debit)</div><div class="card-class">Kelas 6</div></a>
+          <a href="6-3.html" class="class-card"><div class="card-id">6-3</div><div class="card-title">Geometri (Luas & Volume)</div><div class="card-class">Kelas 6</div></a>
+          <a href="6-4.html" class="class-card"><div class="card-id">6-4</div><div class="card-title">Sistem Koordinat</div><div class="card-class">Kelas 6</div></a>
+          <a href="6-5.html" class="class-card"><div class="card-id">6-5</div><div class="card-title">Pengolahan & Penyajian Data</div><div class="card-class">Kelas 6</div></a>
+        </div>
+      </div>
+
+      <!-- SMP -->
+      <div class="grade-block" style="--accent:#10b981;--accent-light:#ecfdf5;">
+        <div class="grade-block-header">
+          <span class="grade-badge smp">SMP</span>
+          <span class="grade-title">Sekolah Menengah Pertama (Kelas 7 – 9)</span>
+        </div>
+
+        <div class="class-section-title">Kelas 7</div>
+        <div class="class-grid">
+          <a href="7-1.html" class="class-card"><div class="card-id">7-1</div><div class="card-title">Bilangan</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-2.html" class="class-card"><div class="card-id">7-2</div><div class="card-title">Bentuk Aljabar</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-3.html" class="class-card"><div class="card-id">7-3</div><div class="card-title">Segiempat dan Segitiga</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-4.html" class="class-card"><div class="card-id">7-4</div><div class="card-title">Persamaan & Pertidaksamaan Linear</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-5.html" class="class-card"><div class="card-id">7-5</div><div class="card-title">Penyajian Data</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-6.html" class="class-card"><div class="card-id">7-6</div><div class="card-title">Aritmetika Sosial</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-7.html" class="class-card"><div class="card-id">7-7</div><div class="card-title">Perbandingan</div><div class="card-class">Kelas 7</div></a>
+          <a href="7-8.html" class="class-card"><div class="card-id">7-8</div><div class="card-title">Garis dan Sudut</div><div class="card-class">Kelas 7</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 8</div>
+        <div class="class-grid">
+          <a href="8-1.html" class="class-card"><div class="card-id">8-1</div><div class="card-title">Persamaan Garis Lurus</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-2.html" class="class-card"><div class="card-id">8-2</div><div class="card-title">Persamaan Linear Dua Variabel</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-3.html" class="class-card"><div class="card-id">8-3</div><div class="card-title">Teorema Pythagoras</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-4.html" class="class-card"><div class="card-id">8-4</div><div class="card-title">Statistika</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-5.html" class="class-card"><div class="card-id">8-5</div><div class="card-title">Lingkaran</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-6.html" class="class-card"><div class="card-id">8-6</div><div class="card-title">Peluang</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-7.html" class="class-card"><div class="card-id">8-7</div><div class="card-title">Bidang Kartesius</div><div class="card-class">Kelas 8</div></a>
+          <a href="8-8.html" class="class-card"><div class="card-id">8-8</div><div class="card-title">Bilangan Berpangkat & Bentuk Akar</div><div class="card-class">Kelas 8</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 9</div>
+        <div class="class-grid">
+          <a href="9-1.html" class="class-card"><div class="card-id">9-1</div><div class="card-title">Kesebangunan & Kekongruenan</div><div class="card-class">Kelas 9</div></a>
+          <a href="9-2.html" class="class-card"><div class="card-id">9-2</div><div class="card-title">Bangun Ruang Sisi Datar</div><div class="card-class">Kelas 9</div></a>
+          <a href="9-3.html" class="class-card"><div class="card-id">9-3</div><div class="card-title">Bangun Ruang Sisi Lengkung</div><div class="card-class">Kelas 9</div></a>
+          <a href="9-4.html" class="class-card"><div class="card-id">9-4</div><div class="card-title">Pola Bilangan</div><div class="card-class">Kelas 9</div></a>
+          <a href="9-5.html" class="class-card"><div class="card-id">9-5</div><div class="card-title">Persamaan Kuadrat</div><div class="card-class">Kelas 9</div></a>
+          <a href="9-6.html" class="class-card"><div class="card-id">9-6</div><div class="card-title">Relasi dan Fungsi</div><div class="card-class">Kelas 9</div></a>
+        </div>
+      </div>
+
+      <!-- SMA -->
+      <div class="grade-block" style="--accent:#8b5cf6;--accent-light:#f5f3ff;">
+        <div class="grade-block-header">
+          <span class="grade-badge sma">SMA</span>
+          <span class="grade-title">Sekolah Menengah Atas (Kelas 10 – 12)</span>
+        </div>
+
+        <div class="class-section-title">Kelas 10</div>
+        <div class="class-grid">
+          <a href="10-1.html" class="class-card"><div class="card-id">10-1</div><div class="card-title">Pangkat, Akar, & Logaritma</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-2.html" class="class-card"><div class="card-id">10-2</div><div class="card-title">Persamaan & Fungsi Kuadrat</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-3.html" class="class-card"><div class="card-id">10-3</div><div class="card-title">Sistem Persamaan Linear & Kuadrat</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-4.html" class="class-card"><div class="card-id">10-4</div><div class="card-title">Pertidaksamaan</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-5.html" class="class-card"><div class="card-id">10-5</div><div class="card-title">Logika Matematika</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-6.html" class="class-card"><div class="card-id">10-6</div><div class="card-title">Trigonometri Dasar</div><div class="card-class">Kelas 10</div></a>
+          <a href="10-7.html" class="class-card"><div class="card-id">10-7</div><div class="card-title">Ruang Dimensi Tiga</div><div class="card-class">Kelas 10</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 11</div>
+        <div class="class-grid">
+          <a href="11-1.html" class="class-card"><div class="card-id">11-1</div><div class="card-title">Statistika</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-2.html" class="class-card"><div class="card-id">11-2</div><div class="card-title">Peluang</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-3.html" class="class-card"><div class="card-id">11-3</div><div class="card-title">Trigonometri Lanjutan</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-4.html" class="class-card"><div class="card-id">11-4</div><div class="card-title">Lingkaran</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-5.html" class="class-card"><div class="card-id">11-5</div><div class="card-title">Suku Banyak (Polinomial)</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-6.html" class="class-card"><div class="card-id">11-6</div><div class="card-title">Fungsi Komposisi & Invers</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-7.html" class="class-card"><div class="card-id">11-7</div><div class="card-title">Limit Fungsi</div><div class="card-class">Kelas 11</div></a>
+          <a href="11-8.html" class="class-card"><div class="card-id">11-8</div><div class="card-title">Turunan (Diferensial)</div><div class="card-class">Kelas 11</div></a>
+        </div>
+
+        <div class="class-section-title">Kelas 12</div>
+        <div class="class-grid">
+          <a href="12-1.html" class="class-card"><div class="card-id">12-1</div><div class="card-title">Integral</div><div class="card-class">Kelas 12</div></a>
+          <a href="12-2.html" class="class-card"><div class="card-id">12-2</div><div class="card-title">Program Linear</div><div class="card-class">Kelas 12</div></a>
+          <a href="12-3.html" class="class-card"><div class="card-id">12-3</div><div class="card-title">Matriks</div><div class="card-class">Kelas 12</div></a>
+          <a href="12-4.html" class="class-card"><div class="card-id">12-4</div><div class="card-title">Barisan, Deret, & Notasi Sigma</div><div class="card-class">Kelas 12</div></a>
+          <a href="12-5.html" class="class-card"><div class="card-id">12-5</div><div class="card-title">Eksponen dan Logaritma</div><div class="card-class">Kelas 12</div></a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer style="text-align:center;padding:2rem 1rem;color:var(--gray-400);font-size:.82rem;border-top:1px solid var(--gray-200);">
+        <p><strong>Telat Belajar Matematika</strong> — Open-source project oleh <strong>milio48</strong></p>
+        <p>Dibuat dengan metode <em>Grounded Math</em> &bull; Ditenagai oleh KaTeX, Lucide, & Vanilla JS</p>
+      </footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
+  </div>
+</body>
+</html>
