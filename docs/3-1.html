@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-1: Bilangan, Uang, & Operasi Hitung — Telat Belajar MTK</title>
+  <meta name="description" content="Bilangan, Uang, & Operasi Hitung — Materi matematika Kelas 3 SD dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sd">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 3 / <strong>3-1</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SD — Kelas 3</span>
+        <h1>Bab 1: Bilangan, Uang, dan Operasi Hitung</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Letak bilangan pada garis bilangan menunjukkan urutan dari yang terkecil hingga terbesar. Penjumlahan, pengurangan, perkalian, dan pembagian merupakan operasi hitung dasar yang digunakan untuk menyelesaikan masalah kuantitas, termasuk perhitungan nilai uang. Garis bilangan ibarat penggaris panjang yang memiliki angka berurutan.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Kasir minimarket:</strong> Menghitung total belanjaan dan memberikan uang kembalian secara presisi kepada pelanggan.</li><li><strong>Pedagang pasar:</strong> Mengalikan harga satuan barang dengan kuantitas yang dibeli oleh pembeli menggunakan operasi hitung campuran sederhana.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Misalkan \(a\), \(b\), dan \(c\) adalah bilangan cacah. Pada operasi hitung campuran: \((a \times b) - c\), perkalian dikerjakan terlebih dahulu sebelum pengurangan.</p><p>Contoh: Vina memiliki 2 lembar uang Rp5.000, lalu ia membeli buku seharga Rp7.000. Sisa uang Vina adalah \((2 \times 5.000) - 7.000 = 10.000 - 7.000 = 3.000\).</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungSisaUang(jumlahLembar, nominalUang, hargaBarang) {
+  let totalUang = jumlahLembar * nominalUang;
+  let kembalianBelanja = totalUang - hargaBarang;
+  return kembalianBelanja;
+}
+
+console.log(hitungSisaUang(2, 5000, 7000)); // Output: 3000</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Garis bilangan</td><td>Number line</td></tr><tr><td>Hitung campuran</td><td>Mixed operations[^1]</td></tr><tr><td>Kembalian tunai</td><td>Change</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong> Budi memiliki 3 lembar uang Rp10.000. Ia membeli 2 buah buku tulis yang masing-masing harganya Rp3.500. Berapa sisa uang Budi saat ini?</p><p><strong>Penyelesaian:</strong></p><ol><li>Hitung total uang yang dimiliki Budi: \(3 \times 10.000 = 30.000\).</li><li>Hitung total pengeluaran untuk membayar belanja: \(2 \times 3.500 = 7.000\).</li><li>Kurangkan total uang awal dengan total pengeluaran: \(30.000 - 7.000 = 23.000\). Sisa uang Budi adalah <strong>Rp23.000</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong> Dina memiliki 5 lembar uang Rp2.000. Ia membeli 3 buah pensil seharga Rp1.500 per batang. Berapa sisa uang Dina?</p><p><strong>Penyelesaian:</strong></p><ol><li>Hitung total uang Dina: \(5 \times 2.000 = 10.000\).</li><li>Hitung total harga pensil: \(3 \times 1.500 = 4.500\).</li><li>Sisa uang: \(10.000 - 4.500 = 5.500\). Sisa uang Dina adalah <strong>Rp5.500</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;">
+        </div>
+        
+      </section>
+
+        <div class="footnote"><p><strong>Operasi Hitung Campuran (Mixed Operations):</strong> Perhitungan yang melibatkan lebih dari satu jenis operasi (penjumlahan, pengurangan, perkalian, pembagian) dalam satu soal. Aturannya: perkalian dan pembagian dikerjakan lebih dulu daripada penjumlahan dan pengurangan.</p></div>
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-3-1">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Operasi Hitung</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Angka Pertama (a)</label>
+      <input type="number" id="pg-numA" value="15" min="0" max="100" oninput="pgCalc_3_1()">
+    
+      <label for="pg-numB">Angka Kedua (b)</label>
+      <input type="number" id="pg-numB" value="4" min="0" max="100" oninput="pgCalc_3_1()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_3_1() {
+      
+      const a = parseFloat(document.getElementById('pg-numA').value) || 0;
+      const b = parseFloat(document.getElementById('pg-numB').value) || 0;
+      document.getElementById('pg-result').textContent = a + ' + ' + b + ' = ' + (a+b);
+      document.getElementById('pg-result2').textContent = a + ' - ' + b + ' = ' + (a-b);
+    
+    }
+    pgCalc_3_1();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

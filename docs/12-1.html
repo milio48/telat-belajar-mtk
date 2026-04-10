@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-1: Integral — Telat Belajar MTK</title>
+  <meta name="description" content="Integral — Materi matematika Kelas 12 SMA dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sma">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 12 / <strong>12-1</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMA — Kelas 12</span>
+        <h1>Bab 1: Integral</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Integral adalah konsep kalkulus yang merupakan kebalikan (invers) dari turunan (diferensial). Secara geometris, integral tentu digunakan untuk menghitung luas daerah di bawah kurva fungsi. Integral ibarat menghitung total volume air hujan yang tertampung dalam sebuah ember — turunan memberitahu kecepatan air menetes per detik, sedangkan integral menjumlahkan seluruh tetesan dari awal hingga akhir.</p><div class="info-card" style="border-left:4px solid var(--accent);"><strong>Catatan:</strong> Integral tak tentu menghasilkan fungsi baru ditambah konstanta integrasi \(C\)[^1], sedangkan integral tentu menghasilkan nilai numerik pasti.</div>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Teknisi Bendungan:</strong> Menghitung total volume air yang mengalir melalui bendungan dalam periode waktu tertentu berdasarkan data laju debit air.</li><li><strong>Ahli Pencitraan Medis:</strong> Mengintegrasikan data dari irisan-irisan gambar MRI dua dimensi untuk merekonstruksi bentuk organ tiga dimensi.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Rumus integral tak tentu untuk bentuk \(ax^n\):</p><p>\(\int ax^n \, dx = \frac{a}{n+1} x^{n+1} + C\)</p><p>Contoh: Hitung \(\int 4x^3 \, dx\).</p><ol><li>Tambahkan 1 pada pangkat: \(3 + 1 = 4\).</li><li>Bagi koefisien dengan pangkat baru: \(\frac{4}{4} = 1\).</li><li>Hasil: \(x^4 + C\).</li></ol>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function integralDasar(koefisien, pangkat) {
+  // Hanya berlaku untuk integral bentuk ax^n
+  const pangkatBaru = pangkat + 1;
+  const koefisienBaru = koefisien / pangkatBaru;
+
+  return {
+    koefisien: koefisienBaru,
+    pangkat: pangkatBaru,
+    hasil: `${koefisienBaru}x^${pangkatBaru} + C`
+  };
+}
+
+// Integral dari 6x^2
+const hasil = integralDasar(6, 2);
+console.log(hasil.hasil); // Output: &quot;2x^3 + C&quot;</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Integral Tentu</td><td>Definite Integral</td></tr><tr><td>Integral Tak Tentu</td><td>Indefinite Integral</td></tr><tr><td>Luas Daerah Kurva</td><td>Area Under Curve</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong></p><p>Hitunglah hasil dari \(\int (3x^2 - 4x + 5) \, dx\).</p><p><strong>Penyelesaian:</strong></p><ol><li>Integralkan setiap suku secara terpisah:</li><li>\(\int 3x^2 \, dx = \frac{3}{3}x^3 = x^3\).</li><li>\(\int -4x \, dx = \frac{-4}{2}x^2 = -2x^2\).</li><li>\(\int 5 \, dx = 5x\).</li><li>Gabungkan seluruh hasil dan tambahkan konstanta \(C\).</li><li>Hasil akhir: \(x^3 - 2x^2 + 5x + C\).</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong></p><p>Hitunglah nilai integral tentu \(\int_{1}^{3} 2x \, dx\).</p><p><strong>Penyelesaian:</strong></p><ol><li>Cari anti-turunan[^2] dari \(2x\): \(\int 2x \, dx = x^2\).</li><li>Evaluasi pada batas atas dan bawah: \([x^2]_{1}^{3} = 3^2 - 1^2 = 9 - 1\).</li><li>Hasil: \(\int_{1}^{3} 2x \, dx = 8\).</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;">
+        </div>
+        
+      </section>
+
+        <div class="footnote"><p><strong>Konstanta Integrasi (\(C\)):</strong> Nilai konstan sembarang yang ditambahkan pada hasil integral tak tentu karena turunan dari konstanta selalu nol, sehingga ada tak hingga banyak fungsi yang memiliki turunan yang sama.</p><p><strong>Anti-turunan:</strong> Istilah lain untuk integral tak tentu. Jika \(F'(x) = f(x)\), maka \(F(x)\) adalah anti-turunan dari \(f(x)\).</p></div>
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-12-1">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Integral ∫axⁿ dx</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Koefisien (a)</label>
+      <input type="number" id="pg-numA" value="3" min="1" max="10" oninput="pgCalc_12_1()">
+    
+      <label for="pg-numB">Pangkat (n)</label>
+      <input type="number" id="pg-numB" value="2" min="0" max="10" oninput="pgCalc_12_1()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_12_1() {
+      
+    const a = parseFloat(document.getElementById('pg-numA').value) || 1;
+    const n = parseFloat(document.getElementById('pg-numB').value) || 0;
+    const newCoeff = (a / (n+1)).toFixed(4).replace(/\.?0+$/, '');
+    document.getElementById('pg-result').textContent = '∫'+a+'x^'+n+' dx';
+    document.getElementById('pg-result2').textContent = '= '+newCoeff+'x^'+(n+1)+' + C';
+  
+    }
+    pgCalc_12_1();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

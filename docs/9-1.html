@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9-1: Kesebangunan & Kekongruenan — Telat Belajar MTK</title>
+  <meta name="description" content="Kesebangunan & Kekongruenan — Materi matematika Kelas 9 SMP dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-smp">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 9 / <strong>9-1</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMP — Kelas 9</span>
+        <h1>Bab 1: Kesebangunan dan Kekongruenan</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Kesebangunan adalah kondisi ketika dua bangun memiliki bentuk yang sama dengan proporsi ukuran yang konsisten, walau ukuran aslinya berbeda. Kekongruenan adalah kondisi ketika dua bangun memiliki bentuk dan ukuran yang identik mutlak. Kesebangunan ibarat sebuah foto yang dicetak dengan beberapa ukuran piktorial yang berbeda. Kekongruenan ibarat dua lembar kertas putih dari satu tumpukan rim yang sama persis.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Pembuat Maket Arsitektur</strong>: Menggunakan prinsip kesebangunan untuk membuat miniatur bangunan yang proporsional dengan rancangan aslinya.</li><li><strong>Pabrik Komponen Mesin</strong>: Menerapkan kekongruenan untuk memproduksi sekrup dan baut yang ukurannya sama persis agar tepat saat dirakit.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Dua segitiga sebangun memiliki proporsi panjang sisi yang sama:</p><div class="katex-display">\[ \frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2} \]</div><p>Contoh perhitungan:</p><p>Sebuah bangun berukuran 2 cm x 3 cm diperbesar sehingga lebarnya menjadi 4 cm. Tingginya dicari melalui persamaan: \(\frac{2}{4} = \frac{3}{t}\). Maka \(t = \frac{3 \times 4}{2} = 6\).</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungSisiSebangun(sisiLama1, sisiLama2, sisiBaru1) {
+  const skalaBanding = sisiBaru1 / sisiLama1;
+  const panjangBaru = sisiLama2 * skalaBanding;
+  return panjangBaru;
+}
+
+const hasilTinggi = hitungSisiSebangun(2, 3, 4);</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Bahasa Indonesia</th><th>Bahasa Inggris</th></tr></thead><tbody><tr><td>Kesebangunan</td><td>Similarity</td></tr><tr><td>Kekongruenan</td><td>Congruence</td></tr><tr><td>Sisi Bersesuaian</td><td>Corresponding Sides</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal:</strong> Tinggi sebuah pohon di gambar adalah 5 cm. Pada gambar yang sama, tinggi tiang adalah 8 cm. Jika tinggi tiang sebenarnya 4 meter, berapakah tinggi pohon sesungguhnya?</p><p><strong>Penyelesaian:</strong></p><ol><li>Susun perbandingan proporsinya: \(\frac{PohonAsli}{PohonGambar} = \frac{TiangAsli}{TiangGambar}\).</li><li>Masukkan angka yang diketahui: \(\frac{PohonAsli}{5} = \frac{4}{8}\).</li><li>Lakukan perkalian silang dan hitung: \(PohonAsli = 5 \times 0,5 = 2,5\) meter.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-9-1">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Cek Kesebangunan Segitiga (rasio sisi)</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Sisi a₁</label>
+      <input type="number" id="pg-numA" value="3" min="1" max="20" oninput="pgCalc_9_1()">
+    
+      <label for="pg-numB">Sisi b₁</label>
+      <input type="number" id="pg-numB" value="4" min="1" max="20" oninput="pgCalc_9_1()">
+    
+      <label for="pg-denA">Sisi a₂</label>
+      <input type="number" id="pg-denA" value="6" min="1" max="40" oninput="pgCalc_9_1()">
+    
+      <label for="pg-denB">Sisi b₂</label>
+      <input type="number" id="pg-denB" value="8" min="1" max="40" oninput="pgCalc_9_1()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_9_1() {
+      
+    const a1 = parseFloat(document.getElementById('pg-numA').value)||1;
+    const b1 = parseFloat(document.getElementById('pg-numB').value)||1;
+    const a2 = parseFloat(document.getElementById('pg-denA').value)||1;
+    const b2 = parseFloat(document.getElementById('pg-denB').value)||1;
+    const r1 = (a1/a2).toFixed(4);
+    const r2 = (b1/b2).toFixed(4);
+    document.getElementById('pg-result').textContent = 'Rasio a: '+r1+' | Rasio b: '+r2;
+    document.getElementById('pg-result2').textContent = r1===r2 ? '✅ Sebangun (rasio sama)' : '❌ Tidak sebangun';
+  
+    }
+    pgCalc_9_1();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

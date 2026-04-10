@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-6: Fungsi Komposisi & Invers — Telat Belajar MTK</title>
+  <meta name="description" content="Fungsi Komposisi & Invers — Materi matematika Kelas 11 SMA dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sma">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 11 / <strong>11-6</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMA — Kelas 11</span>
+        <h1>Bab 6: Fungsi Komposisi dan Fungsi Invers</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Fungsi komposisi adalah penggabungan dua fungsi secara berurutan, di mana hasil keluaran fungsi pertama menjadi masukan untuk fungsi kedua. Fungsi invers adalah kebalikan dari suatu fungsi — jika fungsi \(f\) mengubah \(x\) menjadi \(y\), maka \(f^{-1}\) mengubah \(y\) kembali menjadi \(x\). Fungsi komposisi ibarat rantai perakitan di pabrik: pekerja pertama menghaluskan besi, lalu hasilnya diserahkan ke pekerja kedua untuk dicat.</p><div class="info-card" style="border-left:4px solid var(--accent);"><strong>Catatan:</strong> Tidak semua fungsi memiliki invers. Syaratnya, fungsi harus <strong>bijektif</strong>[^1] (satu-satu dan surjektif).</div>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Spesialis Valuta Asing:</strong> Melakukan konversi bertingkat dan membalikkan kurs (Rupiah → Dollar → Euro, lalu Euro → Dollar → Rupiah saat retur).</li><li><strong>Teknisi Logistik:</strong> Melacak paket melalui kode rute pengiriman berlapis, lalu menggunakan fungsi invers untuk pelacakan balik saat retur.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Komposisi fungsi: \((f \circ g)(x) = f(g(x))\).</p><p>Invers fungsi linear: Jika \(f(x) = ax + b\), maka \(f^{-1}(x) = \frac{x - b}{a}\).</p><p>Contoh: \(f(x) = 2x + 1\) dan \(g(x) = x - 3\).</p><p>\((f \circ g)(x) = f(g(x)) = f(x - 3) = 2(x - 3) + 1 = 2x - 6 + 1 = 2x - 5\).</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function fungsiF(x) {
+  return 2 * x + 1;
+}
+
+function fungsiG(x) {
+  return x - 3;
+}
+
+function komposisiFG(x) {
+  const hasilG = fungsiG(x);
+  const hasilFG = fungsiF(hasilG);
+  return hasilFG;
+}
+
+console.log(komposisiFG(10)); // Output: 15</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Fungsi Komposisi</td><td>Composite Function</td></tr><tr><td>Fungsi Invers</td><td>Inverse Function</td></tr><tr><td>Domain</td><td>Domain</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong></p><p>Diketahui \(f(x) = 3x - 5\). Tentukan \(f^{-1}(x)\).</p><p><strong>Penyelesaian:</strong></p><ol><li>Tulis sebagai \(y = 3x - 5\).</li><li>Tukar posisi \(x\) dan \(y\): \(x = 3y - 5\).</li><li>Selesaikan untuk \(y\): \(3y = x + 5\), maka \(y = \frac{x + 5}{3}\). Jadi, \(f^{-1}(x) = \frac{x + 5}{3}\).</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong></p><p>Diketahui \(f(x) = x + 4\) dan \(g(x) = 2x - 1\). Tentukan \((g \circ f)(3)\).</p><p><strong>Penyelesaian:</strong></p><ol><li>Hitung \(f(3)\) terlebih dahulu: \(f(3) = 3 + 4 = 7\).</li><li>Masukkan hasilnya ke \(g\): \(g(7) = 2(7) - 1 = 14 - 1 = 13\).</li><li>Jadi, \((g \circ f)(3) = 13\).</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;">
+        </div>
+        
+      </section>
+
+        <div class="footnote"><p><strong>Bijektif:</strong> Fungsi yang bersifat satu-satu (setiap output memiliki tepat satu input) dan surjektif (setiap elemen kodomain memiliki pasangan di domain). Contoh fungsi non-bijektif: \(f(x) = x^2\) karena \(f(2) = f(-2) = 4\).</p></div>
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-11-6">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Evaluator Fungsi f(x) = ax + b</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Koefisien a</label>
+      <input type="number" id="pg-numA" value="2" min="-10" max="10" oninput="pgCalc_11_6()">
+    
+      <label for="pg-numB">Konstanta b</label>
+      <input type="number" id="pg-numB" value="3" min="-10" max="10" oninput="pgCalc_11_6()">
+    
+      <label for="pg-denA">Nilai x</label>
+      <input type="number" id="pg-denA" value="5" min="-10" max="10" oninput="pgCalc_11_6()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_11_6() {
+      
+    const a = parseFloat(document.getElementById('pg-numA').value);
+    const b = parseFloat(document.getElementById('pg-numB').value);
+    const x = parseFloat(document.getElementById('pg-denA').value);
+    document.getElementById('pg-result').textContent = 'f('+x+') = '+a+'('+x+') + '+b+' = '+(a*x+b);
+    document.getElementById('pg-result2').textContent = 'f(x) = '+a+'x + '+b;
+  
+    }
+    pgCalc_11_6();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

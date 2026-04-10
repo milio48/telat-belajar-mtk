@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-3: Geometri (Luas & Volume) — Telat Belajar MTK</title>
+  <meta name="description" content="Geometri (Luas & Volume) — Materi matematika Kelas 6 SD dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sd">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 6 / <strong>6-3</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SD — Kelas 6</span>
+        <h1>Bab 3: Geometri (Luas dan Volume Lanjutan)</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Pengukuran bangun datar dan bangun ruang lanjutan melibatkan perhitungan dimensi bidang bersudut dan melengkung, seperti segi banyak, lingkaran, prisma, serta tabung. Menghitung ruang ini ibarat mengetahui seberapa banyak ukuran bentang bahan pelat besi yang dibutuhkan untuk membuat sebuah pipa saluran air (luas permukaan luar) atau mengetahui seberapa banyak air yang dapat dimuat di dalamnya (volume).</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Pembuat kemasan bahan:</strong> Menentukan luasan kertas karton baku yang diperlukan untuk membuat sebuah kotak kardus coklat yang berbentuk prisma segitiga.</li><li><strong>Insinyur perminyakan:</strong> Menghitung daya tampung muat kapasitas minyak bumi mentah di dalam sebuah tangki penampungan ladang pusat berbentuk tabung berukuran raksasa.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Rumus luas lingkaran:</p><p>\(L = \pi \times r^2\)</p><p>Rumus volume tabung:</p><p>\(V = \pi \times r^2 \times t\)</p><p>Keterangan:</p><p>\(\pi\) = \(3.14\) (Konstanta pi rasio lingkaran)</p><p>\(r\) = Jari-jari lingkaran bidang alas</p><p>\(t\) = Tinggi silinder tabung</p><p>Contoh perhitungan luas sebuah lingkaran:</p><p>Jika panjang garis tengah jari-jari \(r = 10\) meter, maka luasan lingkarannya:</p><p>\(L = 3.14 \times 10^2 = 3.14 \times 100 = 314\) meter persegi.</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungVolumeTabung(jariJari, tinggi) {
+  const konstantaPi = 3.14;
+  const luasBidangAlas = konstantaPi * jariJari * jariJari;
+  const nilaiVolumeTotal = luasBidangAlas * tinggi;
+  
+  return nilaiVolumeTotal;
+}
+
+const radiusTangkiData = 10;
+const tinggiTangkiData = 5;
+console.log(hitungVolumeTabung(radiusTangkiData, tinggiTangkiData)); // Output: 1570</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Bahasa Indonesia</th><th>Bahasa Inggris</th></tr></thead><tbody><tr><td>Tabung</td><td>Cylinder</td></tr><tr><td>Prisma segitiga</td><td>Triangular prism</td></tr><tr><td>Luas alas</td><td>Base area</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal:</strong></p><p>Sebuah drum wadah berbentuk tabung yang kokoh memiliki jari-jari bentuk alas \(10\) meter serta ketinggian selubung \(2\) meter tegak lurus. Berapakah ukuran nilai hitung volume udara kosong yang bermuatan di dalam drum logam tersebut saat wadahnya tertutup rapat sepenuhnya? (Gunakan standar \(\pi = 3.14\))</p><p><strong>Penyelesaian:</strong></p><ol><li>Identifikasi informasi data teknis bilangan masukan: konstanta rasio \(\pi = 3.14\), ruas jari-jari \(r = 10\), ukuran tinggi \(t = 2\).</li><li>Hitung ukuran dari bidang alas lingkaran dengan penerapan bentuk rumus persamaan bangun \(L = \pi \times r^2\), dengan komputasi operasi \(3.14 \times (10 \times 10) = 314\) meter persegi.</li><li>Kalikan luas alas pada perhitungan di poin atas terhadap variabel dimensi ketinggian selubung sisi dengan mengikuti standar rumus volume silinder \(V = L \times t\), sehingga mendapat \(314 \times 2 = 628\) meter kubik.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-6-3">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Keliling & Luas Persegi Panjang</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+          <label for="pg-panjang">Panjang (p)</label>
+          <input type="range" id="pg-panjang" min="1" max="20" value="8" oninput="pgGeo_6_3()">
+          <span id="pg-panjang-val" class="text-accent" style="font-weight:600">8</span> cm
+          <label for="pg-lebar" style="margin-top:.5rem">Lebar (l)</label>
+          <input type="range" id="pg-lebar" min="1" max="20" value="5" oninput="pgGeo_6_3()">
+          <span id="pg-lebar-val" class="text-accent" style="font-weight:600">5</span> cm
+        </div>
+        <div>
+          <div class="playground-visual">
+            <svg id="pg-svg-geo" viewBox="0 0 260 180" class="geo-svg" style="width:100%;max-width:260px">
+              <rect id="pg-rect" x="30" y="20" width="160" height="100" class="shape-stroke" rx="2"/>
+              <text id="pg-label-p" x="110" y="140" text-anchor="middle">p = 8</text>
+              <text id="pg-label-l" x="210" y="75" text-anchor="start">l = 5</text>
+            </svg>
+          </div>
+          <div class="playground-output">
+            <div class="playground-result" id="pg-result">K = 26 cm</div>
+            <div class="playground-result-label">Keliling = 2(p + l)</div>
+            <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem">L = 40 cm²</div>
+            <div class="playground-result-label">Luas = p × l</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgGeo_6_3() {
+      const p = parseInt(document.getElementById('pg-panjang').value);
+      const l = parseInt(document.getElementById('pg-lebar').value);
+      document.getElementById('pg-panjang-val').textContent = p;
+      document.getElementById('pg-lebar-val').textContent = l;
+      const w = Math.max(40, p*10); const h = Math.max(30, l*10);
+      const rect = document.getElementById('pg-rect');
+      rect.setAttribute('width', w); rect.setAttribute('height', h);
+      document.getElementById('pg-label-p').textContent = 'p = ' + p;
+      document.getElementById('pg-label-p').setAttribute('x', 30 + w/2);
+      document.getElementById('pg-label-p').setAttribute('y', 20 + h + 20);
+      document.getElementById('pg-label-l').textContent = 'l = ' + l;
+      document.getElementById('pg-label-l').setAttribute('x', 30 + w + 10);
+      document.getElementById('pg-label-l').setAttribute('y', 20 + h/2);
+      document.getElementById('pg-result').textContent = 'K = ' + (2*(p+l)) + ' cm';
+      document.getElementById('pg-result2').textContent = 'L = ' + (p*l) + ' cm²';
+    }
+    pgGeo_6_3();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

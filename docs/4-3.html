@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-3: Pecahan Lanjutan — Telat Belajar MTK</title>
+  <meta name="description" content="Pecahan Lanjutan — Materi matematika Kelas 4 SD dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sd">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 4 / <strong>4-3</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SD — Kelas 4</span>
+        <h1>Bab 3: Pecahan Lanjutan</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Pecahan senilai adalah dua atau lebih pecahan yang terlihat berbeda angkanya, tetapi memiliki nilai yang sama. Pecahan senilai diperoleh dengan mengalikan atau membagi pembilang dan penyebut dengan bilangan yang sama. Konsep ini ibarat memotong sebuah kue: setengah kue (\(\frac{1}{2}\)) sama besarnya dengan dua perempat kue (\(\frac{2}{4}\)) — potongannya berbeda, tapi porsinya identik.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Arsitek:</strong> Menggunakan pecahan senilai saat mempertebal skala denah agar proporsi ruangan tetap akurat meskipun ukuran gambar berubah.</li><li><strong>Koki:</strong> Menggandakan resep makanan dengan mengalikan seluruh takaran bahan secara proporsional agar rasa tetap konsisten.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Rumus menentukan pecahan senilai dengan mengalikan faktor \(n\):</p><p>\(\frac{a}{b} = \frac{a \times n}{b \times n}\)</p><p>Contoh: Buktikan bahwa \(\frac{1}{2}\) senilai dengan \(\frac{2}{4}\).</p><p>\(\frac{1}{2} = \frac{1 \times 2}{2 \times 2} = \frac{2}{4}\) ✓</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function cariPecahanSenilai(pembilang, penyebut, faktorKali) {
+  let hasilAtas = pembilang * faktorKali;
+  let hasilBawah = penyebut * faktorKali;
+  return hasilAtas + &quot;/&quot; + hasilBawah;
+}
+
+console.log(cariPecahanSenilai(1, 2, 2)); // Output: &quot;2/4&quot;</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Pecahan Senilai</td><td>Equivalent Fractions</td></tr><tr><td>Pembilang</td><td>Numerator</td></tr><tr><td>Penyebut</td><td>Denominator</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong></p><p>Sita memiliki potongan kue sebesar \(\frac{1}{4}\) bagian. Budi memiliki potongan kue sebesar \(\frac{2}{8}\) bagian. Apakah porsi kue mereka sama besar?</p><p><strong>Penyelesaian:</strong></p><ol><li>Tulis pecahan Sita: \(\frac{1}{4}\).</li><li>Tulis pecahan Budi: \(\frac{2}{8}\). Sederhanakan dengan membagi pembilang dan penyebut dengan 2: \(\frac{2 \div 2}{8 \div 2} = \frac{1}{4}\).</li><li>Karena \(\frac{1}{4} = \frac{1}{4}\), maka porsi kue Sita dan Budi <strong>sama besar</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong></p><p>Tentukan 3 pecahan yang senilai dengan \(\frac{3}{5}\).</p><p><strong>Penyelesaian:</strong></p><ol><li>Kalikan pembilang dan penyebut dengan 2: \(\frac{3 \times 2}{5 \times 2} = \frac{6}{10}\).</li><li>Kalikan dengan 3: \(\frac{3 \times 3}{5 \times 3} = \frac{9}{15}\).</li><li>Kalikan dengan 4: \(\frac{3 \times 4}{5 \times 4} = \frac{12}{20}\). Jadi, \(\frac{6}{10}\), \(\frac{9}{15}\), dan \(\frac{12}{20}\) senilai dengan \(\frac{3}{5}\).</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-4-3">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Pecahan</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Pembilang 1</label>
+      <input type="number" id="pg-numA" value="2" min="0" max="20" oninput="pgCalc_4_3()">
+    
+      <label for="pg-denA">Penyebut 1</label>
+      <input type="number" id="pg-denA" value="8" min="1" max="20" oninput="pgCalc_4_3()">
+    
+      <label for="pg-numB">Pembilang 2</label>
+      <input type="number" id="pg-numB" value="3" min="0" max="20" oninput="pgCalc_4_3()">
+    
+      <label for="pg-denB">Penyebut 2</label>
+      <input type="number" id="pg-denB" value="8" min="1" max="20" oninput="pgCalc_4_3()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_4_3() {
+      
+      const n1 = parseInt(document.getElementById('pg-numA').value) || 0;
+      const d1 = parseInt(document.getElementById('pg-denA').value) || 1;
+      const n2 = parseInt(document.getElementById('pg-numB').value) || 0;
+      const d2 = parseInt(document.getElementById('pg-denB').value) || 1;
+      const rNum = n1*d2 + n2*d1;
+      const rDen = d1*d2;
+      function gcd(a,b){return b?gcd(b,a%b):a;}
+      const g = gcd(Math.abs(rNum), Math.abs(rDen));
+      document.getElementById('pg-result').textContent = n1+'/'+d1+' + '+n2+'/'+d2+' = '+rNum+'/'+rDen;
+      document.getElementById('pg-result2').textContent = 'Disederhanakan: '+(rNum/g)+'/'+(rDen/g);
+    
+    }
+    pgCalc_4_3();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

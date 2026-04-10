@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-5: Lingkaran — Telat Belajar MTK</title>
+  <meta name="description" content="Lingkaran — Materi matematika Kelas 8 SMP dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-smp">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 8 / <strong>8-5</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMP — Kelas 8</span>
+        <h1>Bab 5: Lingkaran</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Lingkaran adalah himpunan semua titik pada bidang datar yang berjarak sama terhadap satu titik pusat tetap. Jarak tetap tersebut disebut <strong>jari-jari</strong> (\(r\)), sedangkan garis lurus yang menghubungkan dua titik pada lingkaran melewati titik pusat disebut <strong>diameter</strong> (\(d = 2r\)). Lingkaran ibarat bentuk lintasan ujung tali yang diputar mengelilingi sebuah paku yang tertancap di papan — panjang tali adalah jari-jarinya.</p><div class="info-card" style="border-left:4px solid var(--accent);"><strong>Catatan:</strong> Nilai \(\pi\) (pi) adalah rasio konstan antara keliling dan diameter lingkaran, yaitu sekitar \(3.14159...\), yang sering dibulatkan menjadi \(\frac{22}{7}\) atau \(3.14\).</div>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Ahli Topografi:</strong> Menentukan radius jangkauan sinyal menara pemancar untuk merencanakan area cakupan jaringan telekomunikasi.</li><li><strong>Perancang Otomotif:</strong> Menghitung keliling roda kendaraan untuk mengkalibrasi pembacaan speedometer agar akurat.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Rumus keliling lingkaran:</p><div class="katex-display">\[ K = 2 \cdot \pi \cdot r \]</div><p>Rumus luas lingkaran:</p><div class="katex-display">\[ L = \pi \cdot r^2 \]</div><p>Contoh: Sebuah lingkaran memiliki jari-jari \(r = 14\) cm. (Gunakan \(\pi = \frac{22}{7}\))</p><ul><li>Keliling: \(K = 2 \times \frac{22}{7} \times 14 = 88\) cm.</li><li>Luas: \(L = \frac{22}{7} \times 14^2 = \frac{22}{7} \times 196 = 616\) cm².</li></ul>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungLingkaran(jariJari) {
+  const nilaiPi = Math.PI;
+
+  const keliling = 2 * nilaiPi * jariJari;
+  const luas = nilaiPi * jariJari * jariJari;
+
+  return { keliling: keliling, luas: luas };
+}
+
+console.log(hitungLingkaran(14));
+// Output: { keliling: 87.964..., luas: 615.752... }</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Lingkaran</td><td>Circle</td></tr><tr><td>Jari-jari</td><td>Radius</td></tr><tr><td>Diameter (Garis Tengah)</td><td>Diameter</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong></p><p>Seorang tukang taman membuat pembatas batu bata melingkar di sekeliling pancuran air. Diameter lingkaran pancuran tersebut adalah 20 meter. Berapa panjang total batu bata yang dibutuhkan untuk mengelilingi pancuran? (Gunakan \(\pi = 3.14\))</p><p><strong>Penyelesaian:</strong></p><ol><li>Identifikasi data: diameter \(d = 20\) meter.</li><li>Gunakan rumus keliling dengan diameter: \(K = \pi \times d\).</li><li>Hitung: \(K = 3.14 \times 20 = 62.8\) meter. Total panjang batu bata yang dibutuhkan adalah <strong>62.8 meter</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong></p><p>Sebuah taman berbentuk lingkaran memiliki jari-jari 7 meter. Jika biaya penanaman rumput adalah Rp50.000 per meter persegi, berapakah total biaya untuk menanami seluruh taman? (Gunakan \(\pi = \frac{22}{7}\))</p><p><strong>Penyelesaian:</strong></p><ol><li>Hitung luas taman: \(L = \frac{22}{7} \times 7^2 = \frac{22}{7} \times 49 = 154\) m².</li><li>Kalikan luas dengan biaya per meter persegi: \(154 \times 50.000 = 7.700.000\).</li><li>Total biaya penanaman rumput adalah <strong>Rp7.700.000</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;">
+        </div>
+        
+      </section>
+
+        <div class="footnote"><p><strong>Diameter:</strong> Garis terpanjang yang dapat ditarik dalam sebuah lingkaran, melewati titik pusat. Nilainya selalu dua kali lipat jari-jari (\(d = 2r\)).</p></div>
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-8-5">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Visualisasi Lingkaran</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+          <label for="pg-radius">Jari-jari (r)</label>
+          <input type="range" id="pg-radius" min="1" max="15" value="7" oninput="pgCirc_8_5()">
+          <span id="pg-radius-val" class="text-accent" style="font-weight:600">7</span> cm
+        </div>
+        <div>
+          <div class="playground-visual">
+            <svg id="pg-svg-circ" viewBox="0 0 240 240" class="geo-svg" style="width:100%;max-width:240px">
+              <circle id="pg-circle" cx="120" cy="120" r="90" class="shape-stroke"/>
+              <line x1="120" y1="120" x2="210" y2="120" class="dim-line" id="pg-rline"/>
+              <text id="pg-rlbl" x="165" y="112" text-anchor="middle">r = 7</text>
+              <circle cx="120" cy="120" r="3" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <div class="playground-output">
+            <div class="playground-result" id="pg-result">L = 153.94 cm²</div>
+            <div class="playground-result-label">Luas = π × r²</div>
+            <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem">K = 43.98 cm</div>
+            <div class="playground-result-label">Keliling = 2π × r</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCirc_8_5() {
+      const r = parseFloat(document.getElementById('pg-radius').value);
+      document.getElementById('pg-radius-val').textContent = r;
+      const svgR = Math.max(20, r * 12);
+      document.getElementById('pg-circle').setAttribute('r', svgR);
+      document.getElementById('pg-rline').setAttribute('x2', 120 + svgR);
+      document.getElementById('pg-rlbl').setAttribute('x', 120 + svgR/2);
+      document.getElementById('pg-rlbl').textContent = 'r = ' + r;
+      document.getElementById('pg-result').textContent = 'L = ' + (Math.PI * r * r).toFixed(2) + ' cm²';
+      document.getElementById('pg-result2').textContent = 'K = ' + (2 * Math.PI * r).toFixed(2) + ' cm';
+    }
+    pgCirc_8_5();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-4: Statistika — Telat Belajar MTK</title>
+  <meta name="description" content="Statistika — Materi matematika Kelas 8 SMP dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-smp">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 8 / <strong>8-4</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMP — Kelas 8</span>
+        <h1>Bab 4: Statistika</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Statistika adalah cabang matematika yang mempelajari cara mengumpulkan, menyusun, menganalisis, dan menafsirkan data untuk mengambil kesimpulan. Tiga ukuran pemusatan data yang paling mendasar adalah <strong>mean</strong> (rata-rata), <strong>median</strong> (nilai tengah), dan <strong>modus</strong> (nilai yang paling sering muncul). Statistika ibarat mengukur suhu rata-rata sebuah kota selama sebulan — kita tidak perlu memantau setiap detik, cukup mengambil sampel data harian lalu menghitung rata-ratanya untuk mendapatkan gambaran umum.</p><div class="info-card" style="border-left:4px solid var(--accent);"><strong>Catatan:</strong> Mean cocok untuk data tanpa pencilan[^1], median cocok untuk data yang memiliki pencilan, dan modus cocok untuk data kategorikal.</div>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Peneliti Pemasaran:</strong> Menghitung rata-rata pengeluaran konsumen per transaksi untuk menentukan strategi harga produk.</li><li><strong>Insinyur Jaringan:</strong> Menganalisis median waktu respons server harian untuk mendeteksi penurunan performa sistem.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Rumus rata-rata (mean):</p><div class="katex-display">\[ \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n} \]</div><p>Contoh: Terdapat data nilai ujian 3 siswa: 4, 6, dan 8.</p><ol><li>Jumlahkan semua data: \(4 + 6 + 8 = 18\).</li><li>Hitung banyak data: \(n = 3\).</li><li>Rata-rata: \(\bar{x} = \frac{18}{3} = 6\).</li></ol><p>Untuk <strong>median</strong>, urutkan data terlebih dahulu. Jika jumlah data ganjil, median adalah nilai di posisi tengah. Jika genap, median adalah rata-rata dari dua nilai di tengah.</p><p>Untuk <strong>modus</strong>, cari nilai yang paling sering muncul dalam kumpulan data.</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungMean(kumpulanData) {
+  let totalNilai = 0;
+
+  for (let i = 0; i &lt; kumpulanData.length; i++) {
+    totalNilai += kumpulanData[i];
+  }
+
+  const nilaiRata = totalNilai / kumpulanData.length;
+  return nilaiRata;
+}
+
+console.log(hitungMean([4, 6, 8])); // Output: 6</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Rata-rata</td><td>Mean</td></tr><tr><td>Nilai Tengah</td><td>Median</td></tr><tr><td>Modus</td><td>Mode</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal 1:</strong></p><p>Seorang manajer warung mencatat jumlah pesanan minuman selama 7 hari: 5, 4, 2, 5, 8, 5, 3. Tentukan modus dari data penjualan tersebut.</p><p><strong>Penyelesaian:</strong></p><ol><li>Urutkan data dari terkecil ke terbesar: {2, 3, 4, 5, 5, 5, 8}.</li><li>Hitung frekuensi kemunculan setiap nilai: angka 2 muncul 1 kali, 3 muncul 1 kali, 4 muncul 1 kali, <strong>5 muncul 3 kali</strong>, 8 muncul 1 kali.</li><li>Nilai yang paling sering muncul adalah <strong>5</strong>. Maka, modus data penjualan adalah <strong>5 pesanan</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;"><p><strong>Soal 2:</strong></p><p>Nilai ulangan 6 siswa adalah: 60, 75, 80, 80, 90, 95. Tentukan median dari data tersebut.</p><p><strong>Penyelesaian:</strong></p><ol><li>Data sudah terurut: {60, 75, 80, 80, 90, 95}. Jumlah data \(n = 6\) (genap).</li><li>Median untuk data genap dihitung dari dua nilai tengah, yaitu data ke-3 dan ke-4: nilai 80 dan 80.</li><li>Median \(= \frac{80 + 80}{2} = 80\). Nilai tengah data tersebut adalah <strong>80</strong>.</li></ol><hr style="border:none;border-top:1px solid var(--gray-200);margin:1.25rem 0;">
+        </div>
+        
+      </section>
+
+        <div class="footnote"><p><strong>Pencilan (Outlier):</strong> Nilai data yang jauh berbeda dari mayoritas data lainnya. Contoh: dalam data {5, 6, 7, 8, 100}, angka 100 adalah pencilan yang dapat menggeser mean secara signifikan.</p></div>
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-8-4">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Statistika</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+          <label for="pg-data">Data (pisahkan koma)</label>
+          <input type="text" id="pg-data" value="5,8,3,9,7,4,6" oninput="pgStats_8_4()" style="width:100%;padding:.5rem .75rem;border:1px solid var(--gray-300);border-radius:8px;font-family:var(--font-mono);font-size:.9rem;">
+        </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">Mean: 6.00</div>
+          <div class="playground-result" id="pg-result2" style="font-size:1rem;margin-top:.3rem">Median: 6 | Modus: —</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgStats_8_4() {
+      const raw = document.getElementById('pg-data').value;
+      const nums = raw.split(',').map(Number).filter(n=>!isNaN(n)).sort((a,b)=>a-b);
+      if(!nums.length){document.getElementById('pg-result').textContent='Masukkan data';return;}
+      const sum = nums.reduce((a,b)=>a+b,0);
+      const mean = sum/nums.length;
+      const mid = Math.floor(nums.length/2);
+      const median = nums.length%2 ? nums[mid] : (nums[mid-1]+nums[mid])/2;
+      const freq = {}; nums.forEach(n=>{freq[n]=(freq[n]||0)+1;});
+      const maxF = Math.max(...Object.values(freq));
+      const modus = maxF>1?Object.keys(freq).filter(k=>freq[k]===maxF).join(', '):'—';
+      document.getElementById('pg-result').textContent = 'Mean: ' + mean.toFixed(2);
+      document.getElementById('pg-result2').textContent = 'Median: '+median+' | Modus: '+modus;
+    }
+    pgStats_8_4();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

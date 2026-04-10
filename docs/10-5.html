@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-5: Logika Matematika — Telat Belajar MTK</title>
+  <meta name="description" content="Logika Matematika — Materi matematika Kelas 10 SMA dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sma">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 10 / <strong>10-5</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMA — Kelas 10</span>
+        <h1>Bab 5: Logika Matematika</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Logika matematika adalah cabang matematika yang mengeksplorasi aturan dasar mengenai kebenaran atau kesalahan dari sebuah pernyataan komposit tanpa ambiguitas. Logika ibarat sirkuit pada saklar instalasi lampu. Ketika lampu dirangkai seri (seperti operasi konjungsi/DAN), semua saklar wajib ditutup agar lampu menyala; jika dirangkai paralel (operasi disjungsi/ATAU), lampu tetap hidup asalkan minimal ada satu saklar yang tersambung.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Programmer Ahli:</strong> Merangkai "Gerbang Logika" pada pembuatan perangkat lunak dengan aturan if-else untuk mengeksekusi aksi khusus sesuai syarat yang diberikan pengguna (AND, OR, NOT).</li><li><strong>Hukum & Pengacara:</strong> Menggunakan teknik penarikan kesimpulan modus ponens dan tollens dari pasal hukum untuk mendeduksi perbuatan ilegal dengan dalil yang pasti dan tak terbantahkan.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Konjungsi (\(p \wedge q\)) bernilai benar hanya jika \(p\) dan \(q\) benar.</p><p>Disjungsi (\(p \vee q\)) bernilai salah hanya jika \(p\) dan \(q\) salah.</p><p>Implikasi (\(p \Rightarrow q\)) bernilai salah hanya jika \(p\) benar, tetapi \(q\) salah.</p><p>Tabel kebenaran Implikasi:</p><p>\(T \Rightarrow T = T\)</p><p>\(T \Rightarrow F = F\)</p><p>\(F \Rightarrow T = T\)</p><p>\(F \Rightarrow F = T\)</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function ujiLogikaSirkuit(skalarA, skalarB) {
+  // Operasi logika DAN (AND) di JavaScript menggunakan &amp;&amp;
+  const konjungsi = skalarA &amp;&amp; skalarB;
+  
+  // Operasi logika ATAU (OR) menggunakan ||
+  const disjungsi = skalarA || skalarB;
+  
+  return { statusAnd: konjungsi, statusOr: disjungsi };
+}
+
+const lampuA = true;
+const lampuB = false;
+const hasilSirkuit = ujiLogikaSirkuit(lampuA, lampuB);
+console.log(hasilSirkuit); // Output: { statusAnd: false, statusOr: true }</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Konjungsi (Dan)</td><td>Conjunction (AND)</td></tr><tr><td>Disjungsi (Atau)</td><td>Disjunction (OR)</td></tr><tr><td>Implikasi (Jika..Maka)</td><td>Implication (If..Then)</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal:</strong></p><p>Terdapat sebuah pernyataan implikasi dari pendaftaran bank: "Jika kamu karyawan tetap, maka kredit rumahmu akan disetujui". Ternyata kenyataannya Budi adalah karyawan tetap, namun kredit rumahnya tidak disetujui. Apakah pernyataan bank tersebut benar atau salah menurut logika implikasi?</p><p><strong>Penyelesaian:</strong></p><ol><li>Tentukan predikat (p): "Kamu karyawan tetap" (nilai Budi = Benar / True).</li><li>Tentukan konklusi (q): "Kredit disetujui" (nilai Budi = Salah / False).</li><li>Evaluasi \(True \Rightarrow False\), menurut tabel kebenaran implikasi, hasilnya adalah False. Jadi, janji awal dari bank bernilai cacat logika atau bohong secara utuh.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-10-5">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Tabel Kebenaran Logika</div>
+      <div class="playground-grid" style="grid-template-columns:1fr">
+        <div class="playground-controls" style="text-align:center;">
+          <label>Operator</label>
+          <select id="pg-op" onchange="pgLogic_10_5()" style="padding:.4rem .75rem;border:1px solid var(--gray-300);border-radius:8px;font-size:.9rem;margin-bottom:.5rem;">
+            <option value="and">Konjungsi (∧)</option>
+            <option value="or">Disjungsi (∨)</option>
+            <option value="imp">Implikasi (→)</option>
+            <option value="bi">Biimplikasi (↔)</option>
+          </select>
+        </div>
+        <div class="playground-output" id="pg-logic-table" style="text-align:left;"></div>
+      </div>
+    </div>
+    <script>
+    function pgLogic_10_5() {
+      const op = document.getElementById('pg-op').value;
+      const ops = {and:(p,q)=>p&&q, or:(p,q)=>p||q, imp:(p,q)=>!p||q, bi:(p,q)=>(p&&q)||(!p&&!q)};
+      const sym = {and:'∧',or:'∨',imp:'→',bi:'↔'};
+      let html = '<table class="glossary-table"><tr><th>p</th><th>q</th><th>p '+sym[op]+' q</th></tr>';
+      [[true,true],[true,false],[false,true],[false,false]].forEach(([p,q])=>{
+        html+='<tr><td>'+(p?'T':'F')+'</td><td>'+(q?'T':'F')+'</td><td style="font-weight:600;color:var(--accent)">'+(ops[op](p,q)?'T':'F')+'</td></tr>';
+      });
+      html+='</table>';
+      document.getElementById('pg-logic-table').innerHTML = html;
+    }
+    pgLogic_10_5();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

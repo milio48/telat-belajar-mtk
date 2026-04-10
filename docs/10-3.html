@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-3: Sistem Persamaan Linear & Kuadrat — Telat Belajar MTK</title>
+  <meta name="description" content="Sistem Persamaan Linear & Kuadrat — Materi matematika Kelas 10 SMA dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sma">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 10 / <strong>10-3</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMA — Kelas 10</span>
+        <h1>Bab 3: Sistem Persamaan Linier dan Kuadrat</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Sistem persamaan adalah kumpulan dua atau lebih persamaan yang saling terkait dan membagikan batasan nilai yang sama pada variabel-variabelnya. Solusi dari sistem ini adalah perpotongan dari semua persamaan tersebut. Mencari solusi sistem persamaan ibarat dua detektif yang mencari lokasi tersangka dari dua jejak laporan yang berbeda; lokasi tersangkanya adalah titik silang interaksi dari kedua jejak tersebut.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Ahli Gizi:</strong> Menghitung jumlah kombinasi makanan x dan y untuk mencapai batas gizi protein dan karbohidrat yang tepat tanpa melebihi batas kalori harian.</li><li><strong>Konsultan Bisnis:</strong> Menghitung titik impas (break-even point) dengan mempertemukan garis total biaya operasional dengan kurva perkiraan penjualan.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Contoh SPLDV:</p><p>1) \(2x + y = 5\)</p><p>2) \(x - y = 1\)</p><p>Eliminasi dengan menjumlahkan (1) dan (2):</p><p>\((2x + x) + (y - y) = 5 + 1\)</p><p>\(3x = 6\), maka \(x = 2\)</p><p>Substitusikan \(x = 2\) ke (1): \(2(2) + y = 5\), sehingga \(y = 1\).</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function solusiSpldv(a1, b1, c1, a2, b2, c2) {
+  // Matriks determinan untuk aturan Cramer
+  const determinan = (a1 * b2) - (a2 * b1);
+  
+  if (determinan === 0) {
+    return &quot;Garis sejajar atau berhimpit&quot;;
+  }
+  
+  const nilaiX = ((c1 * b2) - (c2 * b1)) / determinan;
+  const nilaiY = ((a1 * c2) - (a2 * c1)) / determinan;
+  
+  return { titikX: nilaiX, titikY: nilaiY };
+}
+
+const titikPotong = solusiSpldv(2, 1, 5, 1, -1, 1);
+console.log(titikPotong); // Output: { titikX: 2, titikY: 1 }</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Sistem Persamaan</td><td>System of Equations</td></tr><tr><td>Variabel</td><td>Variable</td></tr><tr><td>Eliminasi / Substitusi</td><td>Elimination / Substitution</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal:</strong></p><p>Sebuah pabrik produksi merakit meja dan kursi. Waktu yang dicatat untuk merakit 2 meja dan 3 kursi adalah 12 jam. Untuk merakit 3 meja dan 2 kursi memakan waktu 13 jam. Berapa jam waktu yang dibutuhkan untuk merakit 1 meja?</p><p><strong>Penyelesaian:</strong></p><ol><li>Misalkan waktu merakit meja \(m\) dan kursi \(k\). Buat persamaan: \(2m + 3k = 12\) dan \(3m + 2k = 13\).</li><li>Samakan koefisien \(k\) pada kedua persamaan: kalikan persamaan pertama dengan 2 (\(4m + 6k = 24\)), kalikan persamaan kedua dengan 3 (\(9m + 6k = 39\)).</li><li>Kurangi persamaan hasil modifikasi: \((9m - 4m) = 39 - 24\), jadi \(5m = 15\), maka \(m = 3\) jam per meja.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-10-3">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Persamaan Kuadrat (ax² + bx + c = 0)</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Koefisien a</label>
+      <input type="number" id="pg-numA" value="1" min="-10" max="10" oninput="pgCalc_10_3()">
+    
+      <label for="pg-numB">Koefisien b</label>
+      <input type="number" id="pg-numB" value="-5" min="-20" max="20" oninput="pgCalc_10_3()">
+    
+      <label for="pg-denA">Koefisien c</label>
+      <input type="number" id="pg-denA" value="6" min="-20" max="20" oninput="pgCalc_10_3()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_10_3() {
+      
+    const a = parseFloat(document.getElementById('pg-numA').value) || 1;
+    const b = parseFloat(document.getElementById('pg-numB').value);
+    const c = parseFloat(document.getElementById('pg-denA').value);
+    const D = b*b - 4*a*c;
+    let roots = '';
+    if (D > 0) { const x1=(-b+Math.sqrt(D))/(2*a); const x2=(-b-Math.sqrt(D))/(2*a); roots='x₁='+x1.toFixed(2)+', x₂='+x2.toFixed(2); }
+    else if (D === 0) { roots='x = '+(-b/(2*a)).toFixed(2)+' (kembar)'; }
+    else { roots='Tidak ada akar real (D < 0)'; }
+    document.getElementById('pg-result').textContent = 'D = ' + D.toFixed(2);
+    document.getElementById('pg-result2').textContent = roots;
+  
+    }
+    pgCalc_10_3();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

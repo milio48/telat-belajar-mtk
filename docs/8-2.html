@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-2: Persamaan Linear Dua Variabel — Telat Belajar MTK</title>
+  <meta name="description" content="Persamaan Linear Dua Variabel — Materi matematika Kelas 8 SMP dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-smp">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 8 / <strong>8-2</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMP — Kelas 8</span>
+        <h1>Bab 2: Sistem Persamaan Linear Dua Variabel</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Sistem Persamaan Linear Dua Variabel (SPLDV) adalah himpunan matematik yang memuat komponen beberapa persamaan linear dengan jumlah dua variabel tidak diketahui yang diikat untuk dicarikan serangkaian himpunan persimpangannya. Penyelesaian sistem merupakan himpunan nilai yang membuat semua persamaan menjadi proposisi benar. Konsep SPLDV ibarat mencari suatu lokasi titik persilangan temu antar dua ruas rel jalan kereta yang bertabrakan pada sebuah peta rancangan lahan.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Manajer Logistik:</strong> Memanfaatkan pemodelan matematis ini untuk mengoptimalkan komposisi pembelian unit kargo armada transportasi berdasarkan kendala batas kapasitas serta batas anggaran keuangan harian perusahaan.</li><li><strong>Ahli Gizi Medis:</strong> Menerapkan penemuan persilangan komposisi massa campuran komponen bahan medis mentah yang paling tepat agar mencapai kadar rasio nutrien senyawa pasien target terpadu.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Bentuk formulasi sistem persamaan linear dua variabel:</p><div class="katex-display">\[ a_1x + b_1y = c_1 \]</div><div class="katex-display">\[ a_2x + b_2y = c_2 \]</div><p>Contoh perhitungan dari persamaan \(x + y = 6\) serta \(x - y = 2\):</p><p>Jalankan eliminasi penjumlahan: \((x + y) + (x - y) = 6 + 2 \implies 2x = 8 \implies x = 4\).</p><p>Substitusi nilai konversi variabel pertama ke susunan formulasi awal: \(4 + y = 6 \implies y = 2\).</p><p>Nilai pertemuan akar himpunan adalah berlokasi di titik kordinat (4, 2).</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function selesaikanEliminasiMatriks(koefisienTotal, koefisienSelisih) {
+  // Hanya berlaku khusus kasus SPLDV berformat x+y dan x-y
+  const temukanNilaiX = (koefisienTotal + koefisienSelisih) / 2;
+  const temukanNilaiY = koefisienTotal - temukanNilaiX;
+  
+  return { variabelX: temukanNilaiX, variabelY: temukanNilaiY };
+}
+
+console.log(selesaikanEliminasiMatriks(6, 2));</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Sistem Persamaan Linear</td><td>System of Linear Equations</td></tr><tr><td>Dua Variabel</td><td>Two Variables</td></tr><tr><td>Substitusi</td><td>Substitution</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p>Andi membayar Rp10.000 untuk 2 potong roti dan 1 botol susu kaleng, sedang Budi tagihan kasirnya sejumlah Rp8.000 untuk 1 buah potong roti dan 1 botol susu kaleng berjenis sama persis di toko kelontong tersebut. Hitung berapakah ongkos bayar dari sepotong potong belahan roti utuh tersebut?</p><ol><li>Bentuk penyusunan himpunan parameter matematis variabel: Anggap roti sebagai variabel \(x\) dan minuman pembungkus sebagai variabel \(y\). Tulis dua buah klausa dasar: \(2x + y = 10000\) dan \(x + y = 8000\).</li><li>Susun penggabungan antar koefisien relasi: Turunkan kedua ruas dengan mengurangkannya dari atas ke bawah. Bentuk operasional \((2x - x) + (y - y)\) setara \(10000 - 8000\).</li><li>Keluarkan determinasi substitusi harga barang aslinya: Variabel satuan akhir yang ditemukan menghasilkan \(x = 2000\). Biaya belanja untuk pembelian satuan sepotong roti adalah berjumlah Rp2.000.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-8-2">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Grafik Persamaan Linear</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Gradien (m)</label>
+      <input type="number" id="pg-numA" value="2" min="-10" max="10" oninput="pgCalc_8_2()">
+    
+      <label for="pg-numB">Konstanta (c)</label>
+      <input type="number" id="pg-numB" value="1" min="-10" max="10" oninput="pgCalc_8_2()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_8_2() {
+      
+    const m = parseFloat(document.getElementById('pg-numA').value);
+    const c = parseFloat(document.getElementById('pg-numB').value);
+    document.getElementById('pg-result').textContent = 'y = ' + m + 'x + ' + c;
+    document.getElementById('pg-result2').textContent = 'x=0 → y=' + c + ' | x=5 → y=' + (m*5+c);
+  
+    }
+    pgCalc_8_2();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-2: Peluang — Telat Belajar MTK</title>
+  <meta name="description" content="Peluang — Materi matematika Kelas 11 SMA dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-sma">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 11 / <strong>11-2</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMA — Kelas 11</span>
+        <h1>Bab 2: Peluang</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Peluang adalah cabang probabilitas rasional untuk mengukur kemungkinan numerik dari terjadinya sebuah kejadian, dengan skala rentang nol (mustahil) hingga satu (terjadi pasti). Peluang ibarat bermain kuis penebak kotak. Mari asumsikan ada satu kunci mobil di dalam salah satu dari tiga kotak tertutup, dan posisi tebakan kita ada pada satu pilihan, secara natural perbandingan prediksi harapan kita untuk benar adalah satu berbanding jumlah total sarana penebakan seluruhnya.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Auditor Asuransi Risiko:</strong> Mempelajari data historis profil pelanggan mengenai rasio probabilitas resiko kecelakaan jalan raya atau angka sakit medis dalam penentuan limit biaya polis.</li><li><strong>Analitik Kualitas Manufaktur:</strong> Melakukan undian sampel barang di ban berjalan acak untuk melihat persentase kecacatan pabrik barang yang ada terhadap populasi pembuatan masif keseluruhan barang.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Formula peluang dasar suatu kejadian A di ruang sampel S:</p><p>\(P(A) = \frac{n(A)}{n(S)}\)</p><p>Di mana \(n(A)\) adalah banyaknya kejadian A, dan \(n(S)\) adalah banyaknya seluruh kejadian yang mungkin.</p><p>Contoh: Pelemparan satu buah dadu bermata enam. Berapa peluang muncul angka ganjil?</p><p>\(S = \{1, 2, 3, 4, 5, 6\}\), maka \(n(S) = 6\)</p><p>\(A\) (Angka ganjil) \(= \{1, 3, 5\}\), maka \(n(A) = 3\)</p><p>\(P(A) = \frac{3}{6} = \frac{1}{2} = 0.5\)</p>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function hitungPeluangDadu() {
+  // Simulasi melempar dadu virtual (1 sampai 6)
+  const hasilLemparan = Math.floor(Math.random() * 6) + 1;
+  const batasAngkaGagal = 3; 
+
+  // Menentukan status menang dengan logika kondisi
+  if (hasilLemparan &gt; batasAngkaGagal) {
+    return `Angka ${hasilLemparan}: Menang`; 
+  } else {
+    return `Angka ${hasilLemparan}: Kalah`;
+  }
+}
+
+// Simulasi pelemparan probabilitas
+const permainanAngka = hitungPeluangDadu();
+console.log(permainanAngka);</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Istilah Indonesia</th><th>Istilah Inggris</th></tr></thead><tbody><tr><td>Ruang Sampel</td><td>Sample Space</td></tr><tr><td>Kejadian</td><td>Event</td></tr><tr><td>Permutasi</td><td>Permutation</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p><strong>Soal:</strong></p><p>Di dalam sebuah kantong kresek hitam yang solid terdapat 5 buah kelereng merah dan 3 buah kelereng biru. Amir diminta mengambil satu kelereng secara acak dengan mata tertutup tanpa melihat. Berapakah peluangnya agar Amir mendapatkan satu buah kelereng berwarna biru dalam sekali ambil?</p><p><strong>Penyelesaian:</strong></p><ol><li>Rangkum total himpunan sampel semesta. Total unsur obyek pengundian kelereng di dalam kandung ruang sampel \(n(S)\) tersebut adalah \((5 \text{ merah} + 3 \text{ biru}) = 8\).</li><li>Identifikasi jumlah penyebut hasil sukses pengamatan/titik peluang yang dicari \(n(A)\). Amir mengejar jenis kelereng biru, yang berjumlah \(n(A) = 3\).</li><li>Komputasi bentuk rasio peluang matematis dengan \(P = n(A) / n(S)\), maka \(P = 3 / 8\). Jadi rasio kesuksesannya bernilai probalitas pecahan sebesar tiga per delapan.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-11-2">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Kalkulator Peluang</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+      <label for="pg-numA">Kejadian diinginkan</label>
+      <input type="number" id="pg-numA" value="3" min="0" max="100" oninput="pgCalc_11_2()">
+    
+      <label for="pg-numB">Total kemungkinan</label>
+      <input type="number" id="pg-numB" value="12" min="1" max="100" oninput="pgCalc_11_2()">
+    </div>
+        <div class="playground-output">
+          <div class="playground-result" id="pg-result">—</div>
+          <div class="playground-result-label">Hasil Perhitungan</div>
+          <div class="playground-result" id="pg-result2" style="margin-top:.5rem;font-size:1.2rem;">—</div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgCalc_11_2() {
+      
+    const k = parseFloat(document.getElementById('pg-numA').value) || 0;
+    const n = parseFloat(document.getElementById('pg-numB').value) || 1;
+    const p = k / n;
+    document.getElementById('pg-result').textContent = 'P = ' + k + '/' + n + ' = ' + p.toFixed(4);
+    document.getElementById('pg-result2').textContent = (p*100).toFixed(1) + '% peluang';
+  
+    }
+    pgCalc_11_2();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-8: Garis dan Sudut — Telat Belajar MTK</title>
+  <meta name="description" content="Garis dan Sudut — Materi matematika Kelas 7 SMP dengan metode Grounded Math. Belajar dari akar konsep, contoh dunia nyata, logika komputasi, hingga soal latihan.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="grade-smp">
+
+  <!-- Mobile overlay -->
+  <div id="nav-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Sidebar (injected by navigation.js) -->
+    <nav id="nav-sidebar" aria-label="Navigasi Materi"></nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button id="nav-hamburger" aria-label="Menu navigasi">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="breadcrumb">
+          <a href="index.html">Beranda</a> / Kelas 7 / <strong>7-8</strong>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <span class="hero-badge">SMP — Kelas 7</span>
+        <h1>Bab 8: Garis dan Sudut</h1>
+        <p class="hero-subtitle">Metode Grounded Math — 6 Pilar Pembelajaran</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content-body">
+        
+      <!-- Pilar 1: Akar Konsep -->
+      <section class="pillar-section" id="pillar-1">
+        <div class="pillar-header">
+          <i data-lucide="tree-pine"></i>
+          <h2>1. Akar Konsep</h2>
+        </div>
+        
+        
+        <p>Garis adalah kumpulan titik-titik yang memanjang secara tak terbatas di kedua arahnya, sementara sudut terbentuk dari persistensi dua sinar garis patahan yang berpangkal simpul tumpu pada satu titik tembuku sudut yang spesifik. Interseksi irisan persinggungan pertalian dua garis lurus dapat direpresentasikan sebagai dua garis melintang yang saling berpotongan, berhimpitan, hingga format lintasan sejajar presisi. Garis dan sudut ini seumpama rangka rancangan tiang-tiang fondasi hunian rumah yang tegak berdiri memastikan bahwa dinding bilik bisa stabil menahan pusingan angin.</p>
+        
+        
+      </section>
+      <!-- Pilar 2: Pijakan Bumi -->
+      <section class="pillar-section" id="pillar-2">
+        <div class="pillar-header">
+          <i data-lucide="globe-2"></i>
+          <h2>2. Pijakan Bumi</h2>
+        </div>
+        <div class="info-card">
+        
+        <ul><li><strong>Arsitek Sipil Pembangunan:</strong> Penggambar denah tata gedung harus mengunci sudut pilar paku bumi pada presisi 90 derajat siku siku utuh yang sejajar dengan datar aspal guna menopang batas berat muatan besi lantai beton menara apartemen bertingkat berat secara seimbang stabil.</li><li><strong>Seniman Pembuat Jembatan:</strong> Tukang insinyur penyeberangan mencermati persilangan garis rangka sambungan diagonal untuk mengunci dan menetralisir batas gaya guncangan getar dari jalur penarik kereta suspensi angkutan kargo industri baja.</li></ul>
+        
+        </div>
+      </section>
+      <!-- Pilar 3: Mekanika Dasar -->
+      <section class="pillar-section" id="pillar-3">
+        <div class="pillar-header">
+          <i data-lucide="calculator"></i>
+          <h2>3. Mekanika Dasar</h2>
+        </div>
+        
+        
+        <p>Formula kalkulasi besaran sepasang sudut berpelurus selalu berjumlah mantap pada garis lurus panjang mendatar berstatus:</p><div class="katex-display">\[ \angle A + \angle B = 180^{\circ} \]</div><p>Semisal pada perpotongan terdapat nilai potongan separuh juring yakni \( 60^{\circ} \), maka kompensasi potongan sisanya dapat dicari mandiri:</p><div class="katex-display">\[ 60^{\circ} + \angle B = 180^{\circ} \]</div><div class="katex-display">\[ \angle B = 120^{\circ} \]</div>
+        
+        
+      </section>
+      <!-- Pilar 4: Logika Komputasi -->
+      <section class="pillar-section" id="pillar-4">
+        <div class="pillar-header">
+          <i data-lucide="code-2"></i>
+          <h2>4. Logika Komputasi</h2>
+        </div>
+        
+        
+        <pre class="code-block" data-lang="javascript"><code class="language-javascript">function cariSudutPelurus(sudutDiketahuiTentu) {
+  let derajatLurusUtuhDasar = 180;
+  let sudutMinusPelurusTarik = derajatLurusUtuhDasar - sudutDiketahuiTentu;
+  return sudutMinusPelurusTarik;
+}
+
+let sudutBukaTampak = 60;
+let nilaiSisaKetemu = cariSudutPelurus(sudutBukaTampak);
+console.log(&quot;Sudut sisa: &quot; + nilaiSisaKetemu + &quot; derajat&quot;);</code></pre>
+        
+        
+      </section>
+      <!-- Pilar 5: Navigasi Global -->
+      <section class="pillar-section" id="pillar-5">
+        <div class="pillar-header">
+          <i data-lucide="languages"></i>
+          <h2>5. Navigasi Global</h2>
+        </div>
+        
+        
+        <table class="glossary-table"><thead><tr><th>Bahasa Indonesia</th><th>Bahasa Inggris</th></tr></thead><tbody><tr><td>Garis Sejajar</td><td>Parallel Lines</td></tr><tr><td>Garis Berpotongan</td><td>Intersecting Lines</td></tr><tr><td>Sudut Berpelurus</td><td>Supplementary Angles</td></tr></tbody></table>
+        
+        
+      </section>
+      <!-- Pilar 6: Uji Ketangkasan -->
+      <section class="pillar-section" id="pillar-6">
+        <div class="pillar-header">
+          <i data-lucide="swords"></i>
+          <h2>6. Uji Ketangkasan</h2>
+        </div>
+        
+        <div class="exercise-card">
+        <p>Pak supir melihat alat ukur indikator pintu angkutnya bergeser membuka celah selebar 45 derajat. Berapa besar derajat rotasi bukaan yang wajib didorongkan lagi kencang sekuatnya ke luar hingga mencetak batas pintu datar pelurus posisi lurus memaparkan isi kotak angkutannya seratus delapan puluh derajat lurus utuh?</p><ol><li>Nyatakan rumusan keseimbangan persamaan relasi derajat pada sudut lurus mendatar utuh berpelurus: sudut_buka + sudut_sisa = 180 derajat.</li><li>Masukkan input variabel angkanya langsung menimpa posisi: 45 + sudut_sisa = 180.</li><li>Kerjakan tarik pergeseran pengurangan kurangi angka mentah pengurang konstanta hingga hasil totalnya adalah: 135 derajat putaran tarikan akhir.</li></ol>
+        </div>
+        
+      </section>
+
+        
+
+        <!-- Interactive Playground -->
+        
+    <div class="playground" id="playground-7-8">
+      <div class="playground-title"><i data-lucide="play-circle"></i> Visualisasi Sudut</div>
+      <div class="playground-grid">
+        <div class="playground-controls">
+          <label for="pg-angle">Besar Sudut (°)</label>
+          <input type="range" id="pg-angle" min="0" max="360" value="45" oninput="pgAngle_7_8()">
+          <span id="pg-angle-val" class="text-accent" style="font-weight:600">45</span>°
+        </div>
+        <div>
+          <div class="playground-visual">
+            <svg viewBox="0 0 200 200" class="geo-svg" style="width:100%;max-width:200px">
+              <line x1="100" y1="100" x2="190" y2="100" stroke="var(--gray-400)" stroke-width="2"/>
+              <line id="pg-angle-line" x1="100" y1="100" x2="163" y2="37" stroke="var(--accent)" stroke-width="2.5"/>
+              <path id="pg-angle-arc" d="" fill="var(--accent-light)" fill-opacity="0.5" stroke="var(--accent)" stroke-width="1.5"/>
+              <circle cx="100" cy="100" r="3" fill="var(--accent)"/>
+              <text id="pg-angle-lbl" x="140" y="88" font-size="13" fill="var(--accent)" font-weight="600">45°</text>
+            </svg>
+          </div>
+          <div class="playground-output">
+            <div class="playground-result" id="pg-result">Sudut Lancip</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function pgAngle_7_8() {
+      const deg = parseInt(document.getElementById('pg-angle').value);
+      document.getElementById('pg-angle-val').textContent = deg;
+      const rad = -deg * Math.PI / 180;
+      const len = 90;
+      const ex = 100 + len * Math.cos(rad);
+      const ey = 100 + len * Math.sin(rad);
+      document.getElementById('pg-angle-line').setAttribute('x2', ex);
+      document.getElementById('pg-angle-line').setAttribute('y2', ey);
+      const arcR = 35;
+      const ax = 100 + arcR * Math.cos(0);
+      const ay = 100;
+      const bx = 100 + arcR * Math.cos(rad);
+      const by = 100 + arcR * Math.sin(rad);
+      const largeArc = deg > 180 ? 1 : 0;
+      document.getElementById('pg-angle-arc').setAttribute('d', 'M100,100 L'+ax+','+ay+' A'+arcR+','+arcR+' 0 '+largeArc+',0 '+bx+','+by+' Z');
+      document.getElementById('pg-angle-lbl').textContent = deg+'°';
+      let jenis = 'Sudut Nol';
+      if(deg>0&&deg<90) jenis='Sudut Lancip';
+      else if(deg===90) jenis='Sudut Siku-siku';
+      else if(deg>90&&deg<180) jenis='Sudut Tumpul';
+      else if(deg===180) jenis='Sudut Lurus';
+      else if(deg>180&&deg<360) jenis='Sudut Refleks';
+      else if(deg===360) jenis='Sudut Penuh';
+      document.getElementById('pg-result').textContent = jenis;
+    }
+    pgAngle_7_8();
+    </script>
+
+        <!-- Prev/Next navigation -->
+        <div id="prev-next-bar"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Navigation JS -->
+  <script src="assets/navigation.js"></script>
+  <!-- Prism.js Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Initialize Lucide icons -->
+  <script>lucide.createIcons();</script>
+</body>
+</html>
